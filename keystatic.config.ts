@@ -14,17 +14,18 @@ const isDev = process.env.NODE_ENV === "development";
 
 export default config({
   // ──────────────────────────────────────────────
-  // STORAGE: local in dev, GitHub-backed in prod
+  // STORAGE: local in dev, Keystatic Cloud in prod
   // ──────────────────────────────────────────────
   storage: isDev
     ? { kind: "local" }
-    : {
-      kind: "github",
-      repo: {
-        owner: process.env.NEXT_PUBLIC_GITHUB_OWNER ?? "ashupal86",
-        name: process.env.NEXT_PUBLIC_GITHUB_REPO ?? "portfolio-redesing",
-      },
-    },
+    : { kind: "cloud" },
+
+  // ──────────────────────────────────────────────
+  // KEYSTATIC CLOUD
+  // ──────────────────────────────────────────────
+  cloud: {
+    project: "portfolio-ashu-dev/portfolio-v1",
+  },
 
   // ──────────────────────────────────────────────
   // UI BRANDING
