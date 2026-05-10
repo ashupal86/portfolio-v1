@@ -1,0 +1,20 @@
+title: Omari
+description: >-
+  CLI-based post-installation setup automator for Linux distributions.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            A CLI-based post-installation setup automator for Linux distributions. It streamlines the installation of essential applications and system configurations immediately after a fresh OS install, making the "hop" to a new distro seamless and efficient.
+coverImage: null
+techStack:
+  - Bash
+  - Python
+  - Linux Automation
+githubUrl: https://github.com/ashupal86/omari
+liveUrl: ""
+featured: false
+status: completed
+order: 5

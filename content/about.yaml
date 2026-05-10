@@ -1,0 +1,87 @@
+heading: Experience & Skills
+bio:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            Self-taught developer with 3+ years of hands-on learning. Strong in Python backend development (FastAPI, Flask), containerization with Docker, and Linux-based workflows. Final-year B.Tech (CSE) student at NIET with practical DevOps internship experience.
+profileImage: /pfp.png
+experience:
+  - company: Springer Capital
+    role: DevOps Intern
+    period: Sep 2025 – 1 Jan 2026
+    description: >-
+      Worked under supervision on DevOps and deployment workflows, focusing on containerization, CI/CD assistance, and cloud exposure. Containerized applications using Docker and Docker Compose, assisted in GitHub Actions CI/CD pipelines, and gained hands-on exposure to AWS and Azure.
+    location: Remote | Part Time
+  - company: Ekume Club, NIET
+    role: Technical Head
+    period: 2024 – 2025
+    description: >-
+      Leading technical initiatives, mentoring students, and managing technical execution for college-level events and workshops. Organized coding competitions and conducted hands-on workshops on Docker and web deployment.
+    location: Greater Noida, UP
+skills:
+  - category: Languages
+    items:
+      - Python
+      - Java
+      - JavaScript
+      - HTML / CSS
+      - SQL
+  - category: Frameworks
+    items:
+      - FastAPI
+      - Flask
+      - React
+  - category: DevOps
+    items:
+      - Docker
+      - Docker Compose
+      - GitHub Actions
+      - Terraform
+  - category: Cloud & Tools
+    items:
+      - AWS
+      - Google Cloud
+      - Azure
+      - Vercel
+      - Git
+      - Linux
+awards:
+  - title: Web Showdown Winner
+    description: NIET
+    year: "2024"
+  - title: Web Wizard Winner
+    description: NIET
+    year: "2024"
+  - title: BharatXR Recognition
+    description: BharatXR
+    year: "2024"
+education:
+  - degree: B.Tech in Computer Science Engineering
+    institution: Noida Institute of Engineering and Technology (NIET)
+    location: Greater Noida, Uttar Pradesh
+    status: Final Year (Pursuing)
+    cgpa: 6.5 / 10
+certifications:
+  - title: Python (Basic)
+    issuer: HackerRank
+    year: "2024"
+  - title: Java (Basic)
+    issuer: HackerRank
+    year: "2024"
+  - title: Google Cloud Computing Foundations
+    issuer: Google Cloud
+    year: "2024"
+currentlyLearning:
+  - Advanced Docker
+  - FastAPI Best Practices
+  - Microservices Architecture
+  - CI/CD Pipelines
+  - AWS DevOps Concepts
+coreStrengths:
+  - Backend API development using FastAPI & Flask
+  - Docker-based containerization and local dev environments
+  - Linux-first development workflow
+  - Practical DevOps exposure (CI/CD, cloud basics)
+  - Building real-world projects for small business use cases

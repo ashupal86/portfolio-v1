@@ -1,0 +1,21 @@
+title: AiCoamic
+description: >-
+  AI-powered comic generator creating visual stories from text descriptions.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            An innovative AI-powered comic generator that uses machine learning models to create visual stories from text descriptions. It democratizes comic creation by allowing anyone to visualize their narratives without needing artistic skills.
+coverImage: null
+techStack:
+  - Python
+  - Generative AI
+  - Stable Diffusion
+  - React
+githubUrl: https://github.com/ashupal86
+liveUrl: ""
+featured: false
+status: completed
+order: 6

@@ -1,0 +1,88 @@
+---
+title: My DevOps Homelab — Self-Hosting Everything with Proxmox and Docker
+excerpt: >-
+  How I built a full self-hosted infrastructure at home using Proxmox, Docker
+  Compose, and Cloudflare Tunnels — running 15+ services on a single mini PC
+  with zero cloud bills.
+publishedDate: 2025-04-20
+tags:
+  - DevOps
+  - Docker
+  - Self-Hosting
+  - Proxmox
+  - Cloudflare
+featured: true
+---
+# My DevOps Homelab
+
+I've been running a self-hosted homelab for over a year now. Here's what I've learned.
+
+## Why Self-Host?
+
+The cloud is convenient, but it's expensive and you don't own your data. I wanted full control — and the challenge of building it myself.
+
+## The Hardware
+
+A single **Intel NUC mini PC** (i5, 16GB RAM, 512GB SSD) running:
+
+* **Proxmox VE** as the hypervisor
+* Multiple LXC containers and VMs for isolation
+
+## What I Run
+
+| Service       | Stack                |
+| ------------- | -------------------- |
+| Reverse Proxy | NGINX Proxy Manager  |
+| File Sync     | Nextcloud            |
+| VPN           | WireGuard            |
+| CI/CD         | Gitea + Drone        |
+| Monitoring    | Grafana + Prometheus |
+| Bot-Web       | FastAPI + React      |
+
+## Cloudflare Tunnels — The Magic Piece
+
+Instead of exposing my home IP, I use Cloudflare Tunnels to route traffic:
+
+```bash
+# Install cloudflared
+curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64 -o cloudflared
+chmod +x cloudflared && sudo mv cloudflared /usr/local/bin/
+
+# Create tunnel
+cloudflared tunnel create homelab
+cloudflared tunnel route dns homelab myapp.yourdomain.com
+```
+
+Zero open ports. Zero exposed home IP. Full HTTPS.
+
+## Docker Compose Setup
+
+Every service is defined in a `docker-compose.yml`:
+
+```yaml
+version: '3.8'
+services:
+  app:
+    image: myapp:latest
+    restart: unless-stopped
+    environment:
+      - DATABASE_URL=postgresql://...
+    volumes:
+      - ./data:/app/data
+```
+
+## Key Lessons
+
+1. **Use Watchtower** for automatic container updates
+2. **Backup volumes** with `restic` to Backblaze B2
+3. **Monitor everything** — Grafana + Alertmanager saved me from downtime 3x
+4. **Network isolation** — each app in its own Docker network
+
+## Results
+
+* **15+ services** running on one machine
+* **Zero cloud bills** (beyond the $12/year domain)
+* **99.4% uptime** over 12 months
+* Skills: Docker, Proxmox, Nginx, Cloudflare, Grafana, WireGuard
+
+The homelab is the best learning environment I've ever had. Every outage is a lesson.

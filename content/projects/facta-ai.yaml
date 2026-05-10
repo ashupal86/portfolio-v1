@@ -1,0 +1,21 @@
+title: Facta-AI
+description: >-
+  AI-driven fact-checking tool designed to verify claims using automated AI models.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            An innovative AI-driven fact-checking tool built with TypeScript. It verifies claims and information using automated AI models, providing a layer of trust and verification for digital content in the age of misinformation.
+coverImage: null
+techStack:
+  - TypeScript
+  - AI Models
+  - Web Scraping
+  - React
+githubUrl: https://github.com/ashupal86
+liveUrl: ""
+featured: true
+status: completed
+order: 4

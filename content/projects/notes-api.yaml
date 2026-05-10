@@ -1,0 +1,22 @@
+title: Notes-api
+description: >-
+  Lightweight and efficient RESTful API for note-taking and synchronization.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            A lightweight and efficient RESTful API for note-taking and synchronization. It provides a clean interface for CRUD operations, user-specific data isolation through session management, and a focus on backend simplicity. Serves as a high-performance template for modular backend services.
+coverImage: null
+techStack:
+  - Flask
+  - Flask-Session
+  - SQLite
+  - Jinja2
+  - RESTful API
+githubUrl: https://github.com/ashupal86/Notes-api
+liveUrl: ""
+featured: false
+status: completed
+order: 7

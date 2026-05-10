@@ -1,0 +1,21 @@
+title: bot-web
+description: >-
+  Automated deployment framework specifically designed for Docker-based environments.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            An automated deployment framework specifically designed for Docker-based environments. It simplifies the orchestration of containerized applications by providing a streamlined workflow for managing, deploying, and monitoring containers. Ideal for developers looking to automate repetitive DevOps tasks and ensure consistent deployment environments.
+coverImage: null
+techStack:
+  - Python
+  - Docker
+  - Shell Scripting
+  - Container Management
+githubUrl: https://github.com/ashupal86/bot-web
+liveUrl: ""
+featured: true
+status: completed
+order: 3

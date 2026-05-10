@@ -1,0 +1,23 @@
+title: Safe Query AI
+description: >-
+  AI-powered assistant that translates natural language queries into secure SQL commands.
+longDescription:
+  discriminant: document
+  value:
+    - type: paragraph
+      children:
+        - text: >-
+            An AI-powered assistant that translates natural language queries into secure SQL commands. It features integrated security layers that validate every generated query against database schemas and user permissions, ensuring that non-technical users can interact with complex data without compromising safety or integrity.
+coverImage: null
+techStack:
+  - FastAPI
+  - PostgreSQL
+  - React
+  - Node.js
+  - AI Safety Agents
+  - Python
+githubUrl: https://github.com/ashupal86
+liveUrl: ""
+featured: true
+status: completed
+order: 2

@@ -1,0 +1,25 @@
+name: ASHISH PAL
+title: ASHISH PAL — Backend-Focused Developer | DevOps Exposure
+tagline: Backend API development, Docker containerization, and Linux-first workflows.
+description: >-
+  Self-taught developer with 3+ years of hands-on learning. Strong in Python
+  backend development (FastAPI, Flask), containerization with Docker, and
+  Linux-based workflows. Final-year B.Tech (CSE) student at NIET with practical
+  DevOps internship experience.
+email: palbro86@gmail.com
+githubUrl: https://github.com/ashupal86
+linkedinUrl: https://linkedin.com/in/ashish-pal-5725a6257
+twitterUrl: ""
+resumeUrl: /resume.pdf
+navLinks:
+  - label: WORK
+    href: '#projects'
+  - label: JOURNAL
+    href: /blog
+  - label: STASH
+    href: /stash
+  - label: ABOUT
+    href: '#about'
+  - label: CONTACT
+    href: '#contact'
+footerText: © 2026 ASHU. ALL RIGHTS RESERVED.

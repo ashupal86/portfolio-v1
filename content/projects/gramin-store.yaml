@@ -1,0 +1,18 @@
+title: GraminStore
+description: >-
+  Quick-commerce web app with "pay later" feature and merchant inventory
+  management. WebSocket-powered real-time order tracking. Empowers rural
+  merchants to manage customers, books, and stock digitally.
+coverImage: /images/projects/gramin-store/coverImage.png
+techStack:
+  - React
+  - FastAPI
+  - WebSockets
+  - PostgreSQL
+  - Docker
+  - SqlAdmin
+githubUrl: https://github.com/ashupal86
+liveUrl: https://graminstore.devinit.in
+featured: true
+status: in-progress
+order: 1
