@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+
+// Always server-render so CMS changes (deletes/adds) show immediately
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { ArrowLeft, Clock, Tag } from 'lucide-react';
 import styles from './blog.module.css';

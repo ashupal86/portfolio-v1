@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+
+// Always server-render — ensures CMS changes reflect without a rebuild
+export const dynamic = 'force-dynamic';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';

@@ -1,8 +1,23 @@
 import { createReader } from '@keystatic/core/reader';
+import { createGitHubReader } from '@keystatic/core/reader/github';
 import keystaticConfig from '../../keystatic.config';
 
-// Create a reader for local filesystem (we are only doing this during build/dev)
-export const reader = createReader(process.cwd(), keystaticConfig);
+const isDev = process.env.NODE_ENV === 'development';
+
+/**
+ * In development: read from local filesystem (fast, works offline).
+ * In production:  read live from GitHub API so CMS changes (adds/deletes)
+ *                 are reflected immediately without a local sync.
+ *
+ * GITHUB_TOKEN env var is optional but avoids rate-limiting on Vercel.
+ * Set it in Vercel → Settings → Environment Variables.
+ */
+export const reader = isDev
+  ? createReader(process.cwd(), keystaticConfig)
+  : createGitHubReader(keystaticConfig, {
+      repo: `${process.env.NEXT_PUBLIC_GITHUB_OWNER ?? 'ashupal86'}/${process.env.NEXT_PUBLIC_GITHUB_REPO ?? 'portfolio-v1'}`,
+      token: process.env.GITHUB_TOKEN,
+    });
 
 export async function getProjects() {
   const projects = await reader.collections.projects.all();
@@ -10,8 +25,7 @@ export async function getProjects() {
 }
 
 export async function getProjectBySlug(slug: string) {
-  const project = await reader.collections.projects.read(slug);
-  return project;
+  return await reader.collections.projects.read(slug);
 }
 
 export async function getPosts() {
@@ -34,4 +48,3 @@ export async function getHero() {
 export async function getAbout() {
   return await reader.singletons.about.read();
 }
-
