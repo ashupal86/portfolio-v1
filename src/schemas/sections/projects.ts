@@ -16,11 +16,7 @@ export const projectsSchema = collection({
       multiline: true,
       description: 'One-two sentence summary shown in the project list row.',
     }),
-    longDescription: fields.document({
-      label: 'Full Description',
-      formatting: true,
-      links: true,
-    }),
+
     coverImage: fields.image({
       label: 'Cover Image',
       directory: 'public/images/projects',
