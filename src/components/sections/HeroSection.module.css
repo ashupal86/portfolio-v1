@@ -1,0 +1,236 @@
+/* ═══════════════════════════════════════════════
+   HERO SECTION — Cinematic pfp bg, text overlaid
+════════════════════════════════════════════════ */
+
+/* The section itself is the movie-ratio container */
+.hero {
+  position: relative;
+  width: 100%;
+  /* 21:9 cinematic ratio */
+  aspect-ratio: 21 / 9;
+  max-height: 65vh;
+  min-height: 400px;
+  margin-top: 64px; /* below navbar */
+  overflow: hidden;
+  background-color: var(--color-bg);
+}
+
+/* ── Background image (full cover) ──────────── */
+.bgImage {
+  position: absolute;
+  inset: 0;
+  background-image: url('/pfp.png');
+  background-size: cover;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  /* Slight editorial treatment */
+  filter: brightness(0.55) contrast(1.05) saturate(0.85);
+  z-index: 0;
+}
+
+/* ── Gradient overlays for legibility ────────── */
+/* Heavy dark at bottom so text pops */
+.overlayBottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Softer dark at top (navbar transition) */
+.overlayTop {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Left edge blend */
+.overlayLeft {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 30%;
+  background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Foreground content ───────────────────────── */
+.inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* text anchored to bottom */
+  padding-bottom: clamp(24px, 4vh, 48px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Meta row ────────────────────────────────── */
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.metaText {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: rgba(255,255,255,0.55);
+  text-transform: uppercase;
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+/* ── Name ────────────────────────────────────── */
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 96px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -2px;
+  line-height: 0.95;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+}
+
+/* ── Typewriter role ─────────────────────────── */
+.role {
+  font-family: var(--font-mono);
+  font-size: clamp(12px, 1.4vw, 18px);
+  font-weight: 400;
+  color: var(--color-m-light-blue);
+  letter-spacing: 4px;
+  margin: 0;
+  min-height: 1.5em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--color-m-red);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Lower row ───────────────────────────────── */
+.lowerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.taglineRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blueBox {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  background: var(--gradient-m);
+}
+
+.tagline {
+  transition: opacity 0.4s ease;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ── CTA Buttons ─────────────────────────────── */
+.ctaRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background-color: #fff;
+  color: #000;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ctaPrimary:hover {
+  background-color: var(--color-m-dark-blue);
+  border-color: var(--color-m-dark-blue);
+  color: #fff;
+}
+
+.ctaArrow {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.ctaPrimary:hover .ctaArrow { transform: translateX(4px); }
+
+.ctaGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 22px;
+  background-color: transparent;
+  color: rgba(255,255,255,0.65);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ctaGhost:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    aspect-ratio: auto;
+    min-height: 420px;
+    max-height: none;
+  }
+  .lowerRow { flex-direction: column; align-items: flex-start; }
+  .name { font-size: clamp(36px, 10vw, 60px); }
+}

@@ -1,0 +1,76 @@
+.page {
+  padding: 120px 0;
+  min-height: 100vh;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-neutral-400);
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.2s;
+}
+
+.back:hover {
+  color: var(--color-neutral-100);
+}
+
+.heading {
+  margin-bottom: 16px;
+}
+
+.subheading {
+  color: var(--color-neutral-400);
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-neutral-800);
+  color: var(--color-neutral-100);
+}
+
+.itemList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  background: var(--color-neutral-900);
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--color-neutral-800);
+  transition: border-color 0.2s;
+}
+
+.item:hover {
+  border-color: var(--color-neutral-700);
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-neutral-100);
+}
+
+.itemDescription {
+  color: var(--color-neutral-400);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,129 @@
+.page {
+  padding: 120px 0;
+  min-height: 100vh;
+  background: var(--color-neutral-950);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-neutral-400);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 48px;
+  transition: color 0.2s ease;
+}
+
+.back:hover {
+  color: var(--lime-glow);
+}
+
+.heading {
+  margin-bottom: 24px;
+}
+
+.subheading {
+  color: var(--color-neutral-400);
+  max-width: 600px;
+  margin-bottom: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: var(--color-neutral-900);
+  border: 1px solid var(--color-neutral-800);
+  border-radius: 16px;
+  padding: 32px;
+  transition: border-color 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--lime-glow);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cardHeader h2 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-neutral-100);
+}
+
+.icon {
+  color: var(--lime-glow);
+}
+
+.tagCloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  background: var(--color-neutral-800);
+  color: var(--color-neutral-300);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--color-neutral-700);
+  color: var(--color-neutral-100);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  color: var(--color-neutral-400);
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--lime-glow);
+}
+
+.bentoCard {
+  grid-column: span 1;
+  background: linear-gradient(135deg, var(--color-neutral-900), var(--color-neutral-950));
+  border-left: 4px solid var(--lime-glow);
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-neutral-200);
+  margin-bottom: 12px;
+}
+
+.quoteSub {
+  color: var(--color-neutral-500);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

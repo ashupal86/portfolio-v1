@@ -1,0 +1,119 @@
+.page {
+  min-height: 100vh;
+  padding-top: 80px; /* Account for navbar */
+}
+
+.hero {
+  padding-block: var(--space-2xl) var(--space-xl);
+  border-bottom: 1px solid var(--color-outline-variant);
+  background: var(--color-surface-low);
+  margin-bottom: var(--space-2xl);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  margin-bottom: var(--space-xl);
+  transition: color var(--transition-fast);
+}
+
+.back:hover {
+  color: var(--color-primary);
+}
+
+.heading {
+  margin-bottom: var(--space-sm);
+}
+
+.subheading {
+  color: var(--color-on-surface-variant);
+  max-width: 600px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 800px;
+  margin-inline: auto;
+  padding-bottom: var(--space-section);
+}
+
+.postCard {
+  background: var(--color-surface-white);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.postCard:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.postLink {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.postMeta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dateChip {
+  font-size: 0.75rem;
+}
+
+.readTime {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  color: var(--color-on-surface-variant);
+}
+
+.postTitle {
+  transition: color var(--transition-fast);
+}
+
+.postCard:hover .postTitle {
+  color: var(--color-primary);
+}
+
+.postExcerpt {
+  color: var(--color-on-surface-variant);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.postTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-block: var(--space-xl);
+  }
+  
+  .postLink {
+    padding: 24px;
+  }
+}
