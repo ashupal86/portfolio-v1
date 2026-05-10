@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-// Always server-render — ensures CMS changes reflect without a rebuild
-export const dynamic = 'force-dynamic';
+// Use ISR to revalidate every 60 seconds (prevents GitHub API rate limits while keeping content fresh)
+export const revalidate = 60;
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ProjectsSection from '@/components/sections/ProjectsSection';

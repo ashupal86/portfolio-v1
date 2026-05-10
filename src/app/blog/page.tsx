@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-// Always server-render so CMS changes (deletes/adds) show immediately
-export const dynamic = 'force-dynamic';
+// Use ISR to revalidate every 60 seconds (prevents GitHub API rate limits while keeping content fresh)
+export const revalidate = 60;
 import Link from 'next/link';
 import { ArrowLeft, Clock, Tag } from 'lucide-react';
 import styles from './blog.module.css';
