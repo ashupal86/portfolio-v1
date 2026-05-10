@@ -1,13 +1,12 @@
 title: Omari
-description: >-
-  CLI-based post-installation setup automator for Linux distributions.
-coverImage: null
+description: CLI-based post-installation setup automator for most of the popular ISO's.
+coverImage: /images/projects/omari/coverImage.png
 techStack:
   - Bash
   - Python
   - Linux Automation
 githubUrl: https://github.com/ashupal86/omari
-liveUrl: ""
-featured: false
-status: completed
+liveUrl: omari.devinit.in
+featured: true
+status: in-progress
 order: 5
