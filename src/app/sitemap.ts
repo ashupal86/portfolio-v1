@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { getPosts, getProjects } from '@/lib/keystatic';
 
+export const revalidate = 60;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://ashu.devinit.in';
 
