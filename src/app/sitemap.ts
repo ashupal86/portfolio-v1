@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getPosts, getProjects } from '@/lib/keystatic';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://ashu.devinit.in';
@@ -55,7 +55,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
     }));
-    
+
     return [...routes, ...postRoutes];
   } catch (error) {
     console.error('Error generating sitemap:', error);
