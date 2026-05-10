@@ -1,0 +1,23 @@
+.track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.fill {
+  height: 100%;
+  /* M-Performance tricolor gradient */
+  background: linear-gradient(
+    to right,
+    var(--color-m-light-blue),
+    var(--color-m-dark-blue) 50%,
+    var(--color-m-red)
+  );
+  transition: width 0.08s linear;
+  border-radius: 0 1px 1px 0;
+}

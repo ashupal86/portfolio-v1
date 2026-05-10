@@ -1,0 +1,175 @@
+/* ── Loading overlay ────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 1;
+}
+
+.overlay.exit {
+  opacity: 0;
+  transform: scale(1.03);
+  pointer-events: none;
+}
+
+/* ── Top badge ─────────────────────────────────── */
+.badge {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-m-red);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.badgeText {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--color-text-dim);
+}
+
+/* ── Centre block ──────────────────────────────── */
+.centre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  width: min(560px, 90vw);
+}
+
+.stripe {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-m-light-blue),
+    var(--color-m-dark-blue),
+    var(--color-m-red)
+  );
+}
+
+.nameBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nameLabel {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.nameAka {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--color-text-dim);
+}
+
+/* ── Terminal lines ────────────────────────────── */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 2px solid var(--color-border);
+  padding-left: 16px;
+  min-height: 120px;
+}
+
+.termLine {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 0.3s;
+}
+
+.termLine.done {
+  color: var(--color-text-dim);
+}
+
+.termLine.active {
+  color: var(--color-text);
+}
+
+.prompt {
+  color: var(--color-m-light-blue);
+}
+
+.blink {
+  animation: blink 0.7s step-end infinite;
+  color: var(--color-m-light-blue);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Progress ──────────────────────────────────── */
+.progressBar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-surface);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-m-dark-blue),
+    var(--color-m-light-blue)
+  );
+  transition: width 0.3s ease;
+}
+
+.progressLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--color-text-dim);
+  margin-top: -16px;
+  align-self: flex-end;
+}
+
+/* ── Bottom right ──────────────────────────────── */
+.version {
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+}
+
+.version span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--color-text-dim);
+}
