@@ -9,16 +9,13 @@ import { contactSchema } from "./src/schemas/sections/contact";
 import { projectsSchema } from "./src/schemas/sections/projects";
 import { postsSchema } from "./src/schemas/sections/posts";
 
-// Helper: detect production vs local
-const isDev = process.env.NODE_ENV === "development";
+
 
 export default config({
   // ──────────────────────────────────────────────
-  // STORAGE: local in dev, Keystatic Cloud in prod
+  // STORAGE: Keystatic Cloud (all environments)
   // ──────────────────────────────────────────────
-  storage: isDev
-    ? { kind: "local" }
-    : { kind: "cloud" },
+  storage: { kind: "cloud" },
 
   // ──────────────────────────────────────────────
   // KEYSTATIC CLOUD
