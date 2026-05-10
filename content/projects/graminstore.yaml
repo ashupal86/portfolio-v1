@@ -3,7 +3,7 @@ description: >-
   Quick-commerce web app with "pay later" feature and merchant inventory
   management. WebSocket-powered real-time order tracking. Empowers rural
   merchants to manage customers, books, and stock digitally.
-coverImage: /images/projects/gramin-store/coverImage.png
+coverImage: /images/projects/graminstore/coverImage.png
 techStack:
   - React
   - FastAPI
