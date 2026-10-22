@@ -1,6 +1,7 @@
 title: Facta-AI
 description: >-
-  AI-driven fact-checking tool designed to verify claims using automated AI models.
+  Hackathon fact-checking tool that researches user queries and verifies claims.
+  I mainly owned the web crawling and internet-search functionality.
 coverImage: null
 techStack:
   - TypeScript
@@ -8,7 +9,7 @@ techStack:
   - Web Scraping
   - React
 githubUrl: https://github.com/ashupal86
-liveUrl: ""
-featured: true
+liveUrl: https://factai.devinit.in
+featured: false
 status: completed
 order: 4

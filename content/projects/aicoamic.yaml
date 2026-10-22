@@ -1,6 +1,6 @@
 title: AiCoamic
 description: >-
-  AI-powered comic generator creating visual stories from text descriptions.
+  College AI project that converts user-provided stories into generated comics.
 coverImage: null
 techStack:
   - Python
@@ -8,7 +8,7 @@ techStack:
   - Stable Diffusion
   - React
 githubUrl: https://github.com/ashupal86
-liveUrl: ""
+liveUrl: https://aicoamic.devinit.in
 featured: false
 status: completed
 order: 6

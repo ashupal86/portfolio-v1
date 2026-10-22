@@ -5,48 +5,63 @@ bio:
     - type: paragraph
       children:
         - text: >-
-            Self-taught developer with 3+ years of hands-on learning. Strong in Python backend development (FastAPI, Flask), containerization with Docker, and Linux-based workflows. Final-year B.Tech (CSE) student at NIET with practical DevOps internship experience.
+            Final-year B.Tech CSE student building backend systems and learning platform engineering through real projects, a DevOps internship, and a self-hosted homelab. Strongest in Python, FastAPI, Flask, Docker, Linux, and end-to-end backend development.
 profileImage: /pfp.png
 experience:
   - company: Springer Capital
     role: DevOps Intern
-    period: Sep 2025 – 1 Jan 2026
+    period: Sep 2025 – Jan 2026
     description: >-
-      Worked under supervision on DevOps and deployment workflows, focusing on containerization, CI/CD assistance, and cloud exposure. Containerized applications using Docker and Docker Compose, assisted in GitHub Actions CI/CD pipelines, and gained hands-on exposure to AWS and Azure.
+      Migrated services between repositories, wrote Dockerfiles and multi-stage Docker builds, and built GitHub Actions workflows to replace manual testing with containerized testing. Gained guided exposure to AWS, Azure, and Terraform concepts including modules, state files, drift, and test deployments. Researched HAProxy versus Nginx for load balancing and used hey for load testing.
     location: Remote | Part Time
   - company: Ekume Club, NIET
     role: Technical Head
     period: 2024 – 2025
     description: >-
-      Leading technical initiatives, mentoring students, and managing technical execution for college-level events and workshops. Organized coding competitions and conducted hands-on workshops on Docker and web deployment.
+      Led technical initiatives, mentored students, and managed technical execution for college events. Organized coding competitions and conducted hands-on workshops on Docker and web deployment.
     location: Greater Noida, UP
+  - company: Self-hosted Homelab
+    role: Infrastructure Project
+    period: Ongoing
+    description: >-
+      Set up a Proxmox server with virtual machines and operated Docker-based
+      services including Portainer, Portainer Agent, a Notes API, Redis, and
+      Grafana to practise virtualization, Linux, containers, and service operations.
+    location: Personal project
 skills:
-  - category: Languages
+  - category: Strong — Build from scratch
     items:
       - Python
-      - Java
-      - JavaScript
-      - HTML / CSS
-      - SQL
-  - category: Frameworks
-    items:
       - FastAPI
       - Flask
-      - React
-  - category: DevOps
-    items:
       - Docker
       - Docker Compose
-      - GitHub Actions
-      - Terraform
-  - category: Cloud & Tools
-    items:
-      - AWS
-      - Google Cloud
-      - Azure
-      - Vercel
-      - Git
       - Linux
+      - SQL
+      - PostgreSQL
+      - REST APIs
+      - WebSockets
+  - category: Working — Used in projects
+    items:
+      - React
+      - GitHub Actions
+      - AWS
+      - Azure
+      - Google Cloud
+      - Git
+      - Redis
+      - Grafana
+      - Proxmox
+      - Bash
+      - JavaScript
+      - HTML / CSS
+  - category: Learning — In progress
+    items:
+      - Terraform
+      - Azure DevOps
+      - Microservices
+      - CI/CD design
+      - AWS DevOps concepts
 awards:
   - title: Web Showdown Winner
     description: NIET
@@ -62,7 +77,7 @@ education:
     institution: Noida Institute of Engineering and Technology (NIET)
     location: Greater Noida, Uttar Pradesh
     status: Final Year (Pursuing)
-    cgpa: 6.5 / 10
+    cgpa: 6.81 / 10
 certifications:
   - title: Python (Basic)
     issuer: HackerRank
@@ -74,14 +89,14 @@ certifications:
     issuer: Google Cloud
     year: "2024"
 currentlyLearning:
-  - Advanced Docker
-  - FastAPI Best Practices
-  - Microservices Architecture
-  - CI/CD Pipelines
-  - AWS DevOps Concepts
+  - Terraform
+  - Azure DevOps pipelines
+  - Monitoring and observability
+  - Microservices architecture
+  - AWS DevOps concepts
 coreStrengths:
-  - Backend API development using FastAPI & Flask
-  - Docker-based containerization and local dev environments
-  - Linux-first development workflow
-  - Practical DevOps exposure (CI/CD, cloud basics)
-  - Building real-world projects for small business use cases
+  - Building Python backend systems end to end
+  - FastAPI, Flask, PostgreSQL, and WebSockets
+  - Docker-based containerization and local development
+  - Linux-first development and service operations
+  - Learning through self-hosted infrastructure and deployment work

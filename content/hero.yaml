@@ -1,11 +1,11 @@
 name: ASHISH PAL
-headline: Full-Stack Developer & DevOps Engineer
+headline: Backend Developer | DevOps & Platform Engineering
 roles:
-  - Backend-Focused Developer
-  - DevOps Exposure
-  - FastAPI & Flask
+  - Python Backend Developer
+  - FastAPI & Flask Builder
+  - DevOps / Platform Engineering
 taglines:
-  - Building Backend APIs
-  - Docker-based Containerization
-  - Linux-first Workflow
-  - CI/CD & Cloud Basics
+  - End-to-End Backend Systems
+  - Docker-based Infrastructure
+  - Linux-first Service Operations
+  - CI/CD and Cloud Learning

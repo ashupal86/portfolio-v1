@@ -1,6 +1,7 @@
 title: Notes-api
 description: >-
-  Lightweight and efficient RESTful API for note-taking and synchronization.
+  Practice REST API for note-taking, covering CRUD operations, persistence,
+  validation, sessions, and backend fundamentals with Flask and SQLite.
 coverImage: null
 techStack:
   - Flask
